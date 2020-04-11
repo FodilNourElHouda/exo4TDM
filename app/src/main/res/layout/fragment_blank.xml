@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".BlankFragment">
+
+
+
+    <TextView
+        android:id="@+id/deplome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_marginLeft="85dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/textView9"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="530dp"
+        android:textSize="24dp"
+        android:text="Diplome"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+    />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_marginLeft="106dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toRightOf="@+id/textView7"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="450dp"
+        android:textSize="24dp"
+        android:text="Age:"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+    />
+
+    <TextView
+        android:id="@+id/telephone"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_marginLeft="55dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="370dp"
+        android:text="Telephone:"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+    />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:textSize="29dp"
+        android:text="La fiche de l'enseignant :"
+        android:textColor="#A51B1B"
+        android:textStyle="bold"/>
+    />
+
+    <TextView
+        android:id="@+id/adresse"
+        android:layout_width="148dp"
+        android:layout_height="38dp"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_marginLeft="78dp"
+        android:layout_marginBottom="-12dp"
+        android:layout_toRightOf="@+id/textView4"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="290dp"
+        android:text="Adresse:"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+    />
+
+    <TextView
+        android:id="@+id/prenom"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textview2"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@+id/textview2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="132dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="130dp"
+        android:text="Nom:"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginBottom="24dp"
+        android:text="Prenom:"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+    />
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="112dp"
+        android:layout_height="37dp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="13dp"
+        android:text="TextView"
+        android:layout_toRightOf="@+id/textView" />
+</RelativeLayout>
