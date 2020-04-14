@@ -14,7 +14,7 @@
         android:id="@+id/grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="3"
+        android:numColumns="2"
 
         />
 
@@ -26,21 +26,21 @@
       android:layout_weight="1"
       android:orientation="vertical" >
 
-    <FrameLayout
+    <ScrollView
         android:id="@+id/contaner2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-    </FrameLayout>
+    </ScrollView>
 
-    <FrameLayout
+    <ScrollView
         android:id="@+id/contaner1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-    </FrameLayout>
+    </ScrollView>
   </LinearLayout>
 
 

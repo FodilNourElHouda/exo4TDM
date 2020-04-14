@@ -1,16 +1,12 @@
 package com.example.tp4exo4
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
-import android.content.Intent
 import android.widget.Toast
 
 
@@ -22,47 +18,43 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [BlankFragment2.OnFragmentInteractionListener] interface
+ * [ModuleFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [BlankFragment2.newInstance] factory method to
+ * Use the [ModuleFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class BlankFragment2 : Fragment() {
+class ModuleFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val vv = inflater.inflate(R.layout.fragment_blank_fragment2, container, false)
-        var array = arrayOf( Ens("Mostefai","Amine","Alger,Algerie","30 ans ","Enseignant,Chercheur,Developpeur","0725361849"),
-            Ens("BENKRID","Selma ","Boumerdas","34 ans","Ingenieur informatique","0623154896"),
-            Ens("Hassini","Sabrina","Tipazza","35 ans","Ingenieur Informatique","0526319845"),
-
-            Ens("Hadji","Hakime","Msila","36 ans","Ingenieur,Chercheur","0623154898"),
-            Ens("Zakaria","Chaima","Bejaia","30 ans","Ingenieur","0714623261"),
-            Ens("Tolba","Moslim","Bouira","32 ans","Ingenieur","0623154896"),
-            Ens("Hamdad","Leila","Media","33 ans","Ingenieur","0526132984"),
-            Ens("Chbieb","Farid","Alger","34 ans","Ingenieur","0623159874"))
-
+        val view = inflater.inflate(R.layout.fragment_module, container, false)
         val bundle = this.arguments
-        val ens = vv.findViewById(R.id.ens) as Button
-        val duree = vv.findViewById(R.id.duree) as TextView
-        val intitule=vv.findViewById(R.id.intitule) as TextView
+        val ens = view.findViewById(R.id.ens) as Button
+        val duree = view.findViewById(R.id.duree) as TextView
+        val intitule=view.findViewById(R.id.intitule) as TextView
         val index = bundle?.getString("ens")
             val index1 = bundle?.getString("duree")
             val index2 = bundle?.getString("intitule")
             ens.setText(index)
             duree.setText(index1)
             intitule.setText(index2)
-
+        var array = arrayOf(
+            Enseignant("BENKRID","Selma ","Boumerdas","34 ans","Ingenieur informatique","0623154896"),
+            Enseignant("Hassini","Sabrina","Tipazza","35 ans","Ingenieur Informatique","0526319845"),
+            Enseignant("Mostefai","Mohammed","Alger","30 ans ","Enseignant,Chercheur,Developpeur","0725361849"),
+            Enseignant("Hadji","Hakime","Msila","36 ans","Ingenieur,Chercheur","0623154898"),
+            Enseignant("Zakaria","Chaima","Bejaia","30 ans","Ingenieur","0714623261"),
+            Enseignant("Tolba","Moslim","Bouira","32 ans","Ingenieur","0623154896"),
+            Enseignant("Hamded","Karima","Media","33 ans","Ingenieur","0526132984"),
+            Enseignant("Chbieb","Farid","Alger","34 ans","Ingenieur","0623159874"))
 
         ens.setOnClickListener {
             val bundle = Bundle()
-
-
-            if (index=="Ens Benkrid")
+            Toast.makeText(getActivity(), index,Toast.LENGTH_LONG).show();
+            if (index=="Mme Hassini")
             {
-
             bundle.putString("name", array[1].getName())
             bundle.putString("prenom", array[1].getPrenom())
             bundle.putString("adresse", array[1].getAdresse())
@@ -70,11 +62,7 @@ class BlankFragment2 : Fragment() {
             bundle.putString("deplome", array[1].getDeplome())
             bundle.putString("telephone", array[1].getTelephne())
         }
-            Toast.makeText(getActivity(), index,
-                Toast.LENGTH_LONG).show();
-
-
-            if (index.equals("Mostfai A"))
+            if (index.equals("Mme Benkrid"))
             {
                 bundle.putString("name",array[0].getName())
                 bundle.putString("prenom",array[0].getPrenom())
@@ -84,7 +72,7 @@ class BlankFragment2 : Fragment() {
                 bundle.putString("telephone",array[0].getTelephne())
 
             }
-            if (index.equals("Hassini Sabrina"))
+            if (index.equals("M Mostefai"))
             {
                 bundle.putString("name",array[2].getName())
                 bundle.putString("prenom",array[2].getPrenom())
@@ -94,7 +82,7 @@ class BlankFragment2 : Fragment() {
                 bundle.putString("telephone",array[2].getTelephne())
 
             }
-            if (index.equals("Hadji R"))
+            if (index.equals("M Hadji"))
             {
                 bundle.putString("name",array[3].getName())
                 bundle.putString("prenom",array[3].getPrenom())
@@ -104,7 +92,7 @@ class BlankFragment2 : Fragment() {
                 bundle.putString("telephone",array[3].getTelephne())
 
             }
-            if (index.equals("Zakaria C"))
+            if (index.equals("Mme Zakaria"))
             {
                 bundle.putString("name",array[4].getName())
                 bundle.putString("prenom",array[4].getPrenom())
@@ -114,7 +102,7 @@ class BlankFragment2 : Fragment() {
                 bundle.putString("telephone",array[4].getTelephne())
 
             }
-            if (index.equals("Ens Tolba"))
+            if (index.equals("M Tolba"))
             {
                 bundle.putString("name",array[5].getName())
                 bundle.putString("prenom",array[5].getPrenom())
@@ -124,7 +112,7 @@ class BlankFragment2 : Fragment() {
                 bundle.putString("telephone",array[5].getTelephne())
 
             }
-            if (index.equals("Hamdad L"))
+            if (index.equals("Mme Benatchba"))
             {
                 bundle.putString("name",array[6].getName())
                 bundle.putString("prenom",array[6].getPrenom())
@@ -134,7 +122,7 @@ class BlankFragment2 : Fragment() {
                 bundle.putString("telephone",array[6].getTelephne())
 
             }
-            if (index.equals("Chebeib A"))
+            if (index.equals("M Chebieb"))
             {
                 bundle.putString("name",array[7].getName())
                 bundle.putString("prenom",array[7].getPrenom())
@@ -145,7 +133,7 @@ class BlankFragment2 : Fragment() {
 
             }
 
-            val fragment = BlankFragment()
+            val fragment = EnseignantFragment()
 
             val fragmentManager = activity!!.supportFragmentManager
 
@@ -159,13 +147,13 @@ class BlankFragment2 : Fragment() {
 
 
 
-        return vv
+        return view
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //you can set the title for your toolbar here for different fragments different titles
-        activity!!.title = "Emploi De Temps"
+        activity!!.title = "Détails"
     }
 }

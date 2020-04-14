@@ -1,41 +1,39 @@
 package com.example.tp4exo4
 
 class Seance {
-    private val NameM: String
-    private val  DateS:String
+    private val name: String
+    private val  date:String
     private val  Salle:String
-    private val Enseignant: String
-    private val  DureeTotal:String
+    private val enseignant: String
+    private val  duree:String
     private val  Intitule:String
 
 
-    constructor(Name: String,name:String,s:String,d:String,k:String,l:String){
-        //code
-        this.NameM = Name
-
-        this.DateS=name
-        this.Salle=s
-        this.Enseignant=d
-        this.DureeTotal=k
-        this.Intitule=l
+    constructor(name: String, date:String, salle:String,ens:String,duree:String,intitule:String){
+        this.name = name
+        this.date=date
+        this.Salle=salle
+        this.enseignant=ens
+        this.duree=duree
+        this.Intitule=intitule
     }
 
     fun getNameM(): String {
-        return this.NameM
+        return this.name
     }
     fun getDateS(): String {
-        return this.DateS
+        return this.date
     }
     fun getSalle(): String {
         return this.Salle
     }
 
     fun getEnseignant(): String {
-        return this.Enseignant
+        return this.enseignant
     }
 
     fun getDureeTotal(): String {
-        return this.DureeTotal
+        return this.duree
     }
     fun getIntitule(): String {
         return this.Intitule

@@ -1,6 +1,6 @@
 package com.example.tp4exo4
 
-class Ens {
+class Enseignant {
     private val Name: String
     private val  Prenom:String
     private val  Adresse:String
@@ -10,9 +10,7 @@ class Ens {
 
 
     constructor(Name: String,name:String,s:String,d:String,k:String,l:String){
-        //code
         this.Name= Name
-
         this.Prenom=name
         this.Adresse=s
         this.Age=d

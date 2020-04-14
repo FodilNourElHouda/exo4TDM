@@ -19,23 +19,21 @@ class ListViewAdapter(
     init {
         inflater = LayoutInflater.from(mContext)
         this.arraylist = ArrayList()
-        this.arraylist.addAll(MainActivity.movieNamesArrayList)
+        this.arraylist.addAll(MainActivity.seanceArrayList)
     }
 
     inner class ViewHolder {
         internal var name: TextView? = null
-
         internal var name1: TextView? = null
         internal var name2: TextView? = null
-       // internal var image: ImageView? = null
     }
 
     override fun getCount(): Int {
-        return MainActivity.movieNamesArrayList.size
+        return MainActivity.seanceArrayList.size
     }
 
     override fun getItem(position: Int):Seance{
-        return MainActivity.movieNamesArrayList[position]
+        return MainActivity.seanceArrayList[position]
     }
 
     override fun getItemId(position: Int): Long {
@@ -52,15 +50,14 @@ class ListViewAdapter(
             holder.name = view!!.findViewById(R.id.date) as TextView
             holder.name1 = view!!.findViewById(R.id.module) as TextView
             holder.name2= view!!.findViewById(R.id.salle) as TextView
-           // holder.image = view!!.findViewById(R.id.image) as ImageView
             view.tag = holder
         } else {
             holder = view.tag as ViewHolder
         }
         // Set the results into TextViews
-        holder.name!!.setText(MainActivity.movieNamesArrayList[position].getDateS())
-        holder.name1!!.setText(MainActivity.movieNamesArrayList[position].getNameM())
-        holder.name2!!.setText(MainActivity.movieNamesArrayList[position].getSalle())
+        holder.name!!.setText(MainActivity.seanceArrayList[position].getDateS())
+        holder.name1!!.setText(MainActivity.seanceArrayList[position].getNameM())
+        holder.name2!!.setText(MainActivity.seanceArrayList[position].getSalle())
       // holder.image!!.setImageResource(BlankFragment.movieNamesArrayList[position].getImage())
 
         return view
